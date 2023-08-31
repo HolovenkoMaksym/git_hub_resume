@@ -16,10 +16,11 @@ import java.util.Map;
 public class GitHubApiProvider implements ApiProvider {
 
     private final HttpApiClient httpApiClient;
+    private final GitHubProperties gitHubProperties;
 
     @Override
     public GitHubUser getUser(final String accountName) {
-        return httpApiClient.doGet(GitHubApiConstants.USER_ENDPOINT.formatted(accountName), Map.of(), GitHubUser.class);
+        return httpApiClient.doGet(gitHubProperties.getBaseUrl() + gitHubProperties.getUserEndpoint().formatted(accountName), Map.of(), GitHubUser.class);
     }
 
     @Override

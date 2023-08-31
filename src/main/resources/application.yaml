@@ -1,0 +1,4 @@
+github:
+  api:
+    baseUrl: https://api.github.com
+    userEndpoint: /users/%s
