@@ -1,4 +1,4 @@
-<h1>GitHub resume test application for Ciklum</h1>
+<h1>GitHub resume application</h1>
 
 <h3>Usage:</h3>
 1) Run mvnspring-boot:run command
